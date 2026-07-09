@@ -15,6 +15,7 @@ Definir como o Maestro deve despachar tarefas para subagentes e consolidar respo
 2. Chave: B | Agente: CURATOR | Responsabilidade: Encontrar cursos para lacunas de habilidades
 3. Chave: C | Agente: COACH | Responsabilidade: Entrevista simulada
 4. Chave: D | Agente: MAESTRO | Responsabilidade: Conduzir ou refazer quiz e regenerar `data/user-profile.md`
+5. Chave: E | Agente: LATEX-CV-BUILDER | Responsabilidade: Criar e preencher currículos LaTeX com base em dados de pastas locais
 
 ## Envelope de Despacho (Maestro -> spawn_agent)
 Use exatamente este formato:
@@ -79,6 +80,12 @@ Use exatamente este formato:
 2. contexto-minimo: status de conclusão e intenção do usuário
 3. saida-minima: menu com opções A/B/C/D ou próxima pergunta do quiz
 4. erro: incluir falha de leitura/escrita em `erros`
+
+5. LATEX-CV-BUILDER
+1. entrada-obrigatoria: caminho físico da pasta de dados/certificados
+2. contexto-minimo: preenchimento estruturado, sanitização de LaTeX e polimento de descrições
+3. saida-minima: arquivo .tex em `data/curriculo/` e link do arquivo
+4. erro: pasta inacessível, erro de compilação/escrita em `erros`
 
 ## Despacho Sequencial do COACH (6 despachos)
 Quando usuário selecionar C, o Maestro deve executar 6 despachos sequenciais para o COACH:

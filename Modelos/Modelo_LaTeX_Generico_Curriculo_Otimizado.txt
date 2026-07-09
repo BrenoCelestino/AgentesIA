@@ -1,0 +1,149 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Pacotes essenciais para formatação e compatibilidade ATS
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english,portuguese]{babel}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Mapeamento Unicode crítico para leitores de PDF de ATS (evita caracteres corrompidos)
+\input{glyphtounicode.tex}
+\pdfgentounicode=1
+
+% Ajuste de margens moderno e limpo usando geometry
+\usepackage[left=0.5in, top=0.5in, right=0.5in, bottom=0.5in]{geometry}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatação de seções
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Comandos customizados para itens do currículo
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% ==============================================================================
+% CABEÇALHO (Dados de Contato)
+% ==============================================================================
+\begin{center}
+    \textbf{\Huge \scshape [NOME COMPLETO]} \\ \vspace{5pt}
+    \small [CIDADE, ESTADO, PAÍS] \\
+    \href{[LINK LINKEDIN]}{\underline{LinkedIn: [ID LINKEDIN]}} $|$ 
+    \href{[LINK GITHUB]}{\underline{GitHub: [ID GITHUB]}} $|$
+    \href{[LINK PORTFOLIO]}{\underline{Portfolio: [PORTFOLIO]}} \\
+    \small \textit{Phone: [TELEFONE] $|$ E-mail: [EMAIL]}
+\end{center}
+
+% ==============================================================================
+% RESUMO PROFISSIONAL
+% ==============================================================================
+\section{Professional Summary / Resumo Profissional}
+[RESUMO PROFISSIONAL IMPACTANTE: Focado em competências centrais, anos de experiência e principais resultados. Deve ser conciso e direto ao ponto.]
+
+% ==============================================================================
+% EXPERIÊNCIA PROFISSIONAL
+% ==============================================================================
+\section{Professional Experience / Experiência Profissional}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {[NOME DA EMPRESA]}{[CIDADE, ESTADO]}
+      {[CARGO/FUNÇÃO]}{[MÊS ANO INÍCIO] -- [MÊS ANO FIM ou Presente]}
+      \resumeItemListStart
+        \resumeItem{[Conquista/Tarefa 1: Comece com verbo de ação forte, descreva a ação e inclua o impacto ou resultado quantificado (ex: redução de 30\% de tempo).]}
+        \resumeItem{[Conquista/Tarefa 2: Detalhe técnico ou metodológico relevante usando palavras-chave da vaga/área.]}
+        \resumeItem{[Conquista/Tarefa 3: Colaboração ou liderança em projetos com impacto nos KPIs da área.]}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% FORMAÇÃO ACADÊMICA
+% ==============================================================================
+\section{Education / Formação Acadêmica}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {[INSTITUIÇÃO DE ENSINO]}{[CIDADE, ESTADO]}
+      {[NOME DO CURSO/GRAU ACADÊMICO]}{[ANO INÍCIO] -- [ANO CONCLUSÃO]}
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% PROJETOS
+% ==============================================================================
+\section{Selected Projects / Projetos Selecionados}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{[NOME DO PROJETO]} $|$ \emph{[TECNOLOGIAS UTILIZADAS]}}{[ANO]}
+      \resumeItemListStart
+        \resumeItem{[Descreva o objetivo do projeto, o desafio superado e os resultados ou aprendizados obtidos.]}
+        \resumeItem{[Forneça links de código (GitHub) se disponíveis para demonstrar transparência e competência prática.]}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% IDIOMAS E CERTIFICAÇÕES (Adição recomendada para melhorar o modelo)
+% ==============================================================================
+\section{Languages \& Certifications / Idiomas e Certificações}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages / Idiomas}{: [Idioma 1] ([Nível - ex: Fluente]), [Idioma 2] ([Nível - ex: Intermediário]).} \\
+     \textbf{Certifications / Certificações}{: [Certificação 1 - Instituição, Ano], [Certificação 2 - Instituição, Ano].}
+    }}
+  \end{itemize}
+
+% ==============================================================================
+% COMPETÊNCIAS (SKILLS)
+% ==============================================================================
+\section{Technical Skills / Habilidades Técnicas}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming \& Databases / Programação e Bancos de Dados}{: [Linguagem 1, Linguagem 2, SQL...]} \\
+     \textbf{Tools \& Frameworks / Ferramentas e Frameworks}{: [Framework 1, Docker, AWS, Git...]} \\
+     \textbf{Methodologies \& Concepts / Metodologias e Conceitos}{: [Agile, TDD, Clean Architecture, CI/CD...]}
+    }}
+  \end{itemize}
+
+\end{document}

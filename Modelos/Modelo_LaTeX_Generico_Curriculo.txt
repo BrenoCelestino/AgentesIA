@@ -1,0 +1,154 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Pacotes essenciais para formatação ATS-friendly
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+
+% Ajuste de margens para maximizar espaço sem poluir visualmente
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatação de seções
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Comandos customizados para itens do currículo
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% ==============================================================================
+% CABEÇALHO
+% ==============================================================================
+\begin{center}
+    \textbf{\Huge \scshape Alice Smith} \\ \vspace{5pt}
+    \small New York, NY, United States \\
+    \href{https://linkedin.com/in/alicesmith}{\underline{LinkedIn: /in/alicesmith}} $|$ 
+    \href{https://github.com/alicesmith}{\underline{GitHub: /alicesmith}} $|$
+    \href{https://alicesmith.com}{\underline{Portfolio: alicesmith.com}} \\
+    \small \textit{Phone: +1 (555) 987-6543 $|$ E-mail: alice.smith@email.com}
+\end{center}
+
+% ==============================================================================
+% RESUMO PROFISSIONAL
+% ==============================================================================
+\section{Professional Summary}
+Detail-oriented Data Analyst with over 4 years of experience in data modeling, statistical analysis, and business intelligence. Proven ability to transform complex datasets into actionable insights that drive strategic business decisions. Adept at working with cross-functional teams to identify KPIs, optimize reporting processes, and develop automated dashboards. Strong analytical mindset with a passion for continuous learning and process improvement.
+
+% ==============================================================================
+% EXPERIÊNCIA PROFISSIONAL
+% ==============================================================================
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {TechNova Analytics}{New York, NY}
+      {Senior Data Analyst}{Mar 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented interactive Tableau dashboards, reducing weekly reporting time by 30\% for the executive team.}
+        \resumeItem{Analyzed customer behavior datasets containing over 5 million records using Python and SQL to identify churn drivers.}
+        \resumeItem{Collaborated with the marketing department to A/B test campaign strategies, resulting in a 15\% increase in conversion rates.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Market Insights Corp}{Boston, MA}
+      {Data Analyst Intern}{Jun 2019 -- Feb 2021}
+      \resumeItemListStart
+        \resumeItem{Assisted in the extraction and cleaning of large financial datasets from multiple relational databases.}
+        \resumeItem{Developed automated daily performance reports using Excel macros and basic SQL queries.}
+        \resumeItem{Presented monthly findings to stakeholders, highlighting key market trends and potential areas for revenue growth.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% FORMAÇÃO ACADÊMICA
+% ==============================================================================
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Boston University}{Boston, MA}
+      {Master of Science in Business Analytics}{Sep 2019 -- May 2021}
+    \resumeSubheading
+      {State University}{Albany, NY}
+      {Bachelor of Science in Statistics}{Sep 2015 -- May 2019}
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% PROJETOS
+% ==============================================================================
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{E-commerce Sales Prediction Model} $|$ \emph{Python, scikit-learn, Pandas}}{2023}
+      \resumeItemListStart
+        \resumeItem{Built a machine learning model to forecast quarterly sales based on historical data and seasonal trends.}
+        \resumeItem{Achieved a 92\% prediction accuracy, allowing the supply chain team to optimize inventory management.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Customer Segmentation Tool} $|$ \emph{R, SQL, K-Means Clustering}}{2022}
+      \resumeItemListStart
+        \resumeItem{Clustered user database into 5 distinct personas to tailor targeted email marketing campaigns.}
+        \resumeItem{Deployed the tool on a local server, making it accessible to the entire sales department.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% ==============================================================================
+% COMPETÊNCIAS (SKILLS)
+% ==============================================================================
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming \& Databases}{: Python (Pandas, NumPy), R, SQL (PostgreSQL, MySQL), VBA.} \\
+     \textbf{Tools \& Visualization}{: Tableau, Power BI, Microsoft Excel, Jupyter Notebook, Git.} \\
+     \textbf{Methodologies}{: A/B Testing, Statistical Modeling, Predictive Analytics, Agile/Scrum.}
+    }}
+ \end{itemize}
+
+\end{document}
