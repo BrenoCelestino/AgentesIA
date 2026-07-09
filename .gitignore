@@ -1,0 +1,28 @@
+# Dados e Informações Pessoais do Usuário (inclui logs, perfis e resultados de buscas)
+data/
+
+# Chaves de API e variáveis de ambiente locais
+.env
+.env*.local
+
+# Cache e relatórios de scraping
+.firecrawl/
+
+# Arquivos de dados gerados
+amazon.json
+kabum.json
+ml.json
+
+# Ambientes Virtuais de Python e Cache
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Dependências Node.js
+node_modules/
+
+# Arquivos temporários do Sistema Operacional
+.DS_Store
+Thumbs.db
